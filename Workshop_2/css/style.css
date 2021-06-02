@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ol, ul {
+	list-style: none;
+}
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #160647;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 400;
+}
+input,textarea,select{
+	font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+a{
+	color: #160647;
+}
+a:hover,.submit:hover{
+	filter: alpha(opacity = 85);
+	-moz-opacity: 0.85;
+	-khtml-opacity: 0.85;
+	opacity: 0.85;
+}
+.thumb{
+	display: block;
+}
+.thumb img{
+	display: block;
+	width:100%;
+}
+p{
+	line-height:1.6em;
+	font-size: 16px;
+	font-family: "open_sansregular", Arial;
+	font-weight: 400;
+}
+::placeholder {
+	color: #a4a4a4;
+	font-family: 'latolight';
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../assets/fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../assets/fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../assets/fonts/opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('../assets/fonts/opensans-semibold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/opensans-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#spotlight {
+	background: url("../assets/images/Web-Development-Company-USA.jpg") no-repeat 100%;
+}
+
+#spotlight .wrapper {
+	backdrop-filter: brightness(30%);
+	padding: 50px;
+}
+
+.navbar-nav .nav-item .nav-link {
+	position: relative;
+	color: rgba(255,255,255,0.8);
+	font-family: "open_sanssemibold";
+}
+
+.navbar-nav .nav-item>.active::after {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    content: " ";
+    border-bottom: 4px solid #DF7189;
+    border-radius: 2px;
+}
+
