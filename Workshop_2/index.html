@@ -2,56 +2,85 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Title</title>
+		<title>Website Company</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/style.min.css" />
 		<link rel="stylesheet" type="text/css" href="./css/slick.css"/>
 		<link rel="stylesheet" href="./css/font-awesome.css">
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script defer type="text/javascript" src="./js/slick.min.js"></script>
-		<script defer src="./js/script.js"></script>
+		<script defer src="./js/script.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
 		<section id="spotlight">
+			<div class="side-menu d-lg-none d-flex flex-grow-1 justify-content-end col-md-3 col-sm-4 col-8" id="main-navigation">
+				<span onclick=removeMenu() class="close-button"><i class="fa fa-times fs-1" aria-hidden="true"></i></span>
+		        <ul class="navbar-nav flex-lg-row w-100 h-100 justify-content-lg-end flex-column justify-content-start">
+		            <li onclick=removeMenu() class="nav-item me-lg-3 me-0 align-self-stretch py-lg-0 py-2 ps-lg-0 ps-4">
+		                <a onclick=setActive(event) class="nav-link py-0 active" href="#">Home</a>
+		            </li>
+		            <li onclick=removeMenu() class="nav-item me-lg-3 me-0 align-self-stretch py-lg-0 py-2 ps-lg-0 ps-4">
+		                <a onclick=setActive(event) class="nav-link py-0" href="#services">Service</a>
+		            </li>
+		            <li onclick=removeMenu() class="nav-item me-lg-3 me-0 align-self-stretch py-lg-0 py-2 ps-lg-0 ps-4">
+		                <a onclick=setActive(event) class="nav-link py-0" href="#">Features</a>
+		            </li>
+		            <li onclick=removeMenu() class="nav-item me-lg-3 me-0 align-self-stretch py-lg-0 py-2 ps-lg-0 ps-4">
+		                <a onclick=setActive(event) class="nav-link py-0" href="#">Works</a>
+		            </li>
+		            <li onclick=removeMenu() class="nav-item me-lg-3 me-0 align-self-stretch py-lg-0 py-2 ps-lg-0 ps-4">
+		                <a onclick=setActive(event) class="nav-link py-0" href="#tech_stack">Tech Stack</a>
+		            </li>
+		            <li onclick=removeMenu() class="nav-item me-lg-3 me-0 align-self-stretch py-lg-0 py-2 ps-lg-0 ps-4">
+		                <a onclick=setActive(event) class="nav-link py-0" href="#team">Team</a>
+		            </li>
+		            <li onclick=removeMenu() class="nav-item me-lg-3 me-0 align-self-stretch py-lg-0 py-2 ps-lg-0 ps-4">
+		                <a onclick=setActive(event) class="nav-link py-0" href="#blogs">Blog</a>
+		            </li>
+		            <li onclick=removeMenu() class="nav-item align-self-stretch py-lg-0 py-2 ps-lg-0 ps-4">
+		                <a onclick=setActive(event) class="nav-link py-0" href="#contact">Contact</a>
+		            </li>
+		        </ul>
+		    </div>
 			<section class="wrapper">
-				<header class="navbar navbar-expand-md container">
-			    	<a class="navbar-brand" href="#"><img src="./assets/images/logo.png" alt="image" /></a>
-				    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+				<header class="d-flex justify-content-between container py-3">
+			    	<a class="navbar-brand col-5 col-sm-4 col-md-3 col-lg-2" href="#"><img class="d-block w-100" src="./assets/images/logo.png" alt="image" /></a>
+				    <button onclick=showMenu() class="d-lg-none d-md-block align-self-center navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
 				        <span class="navbar-toggler-icon"></span>
 				    </button>
-				    <div class="collapse navbar-collapse justify-content-end" id="main-navigation">
-				        <ul class="navbar-nav w-75 justify-content-between">
-				            <li class="nav-item">
+				    <div class="menu d-lg-flex d-none flex-grow-1 justify-content-end" id="main-navigation">
+				        <ul class="navbar-nav flex-lg-row w-100 h-100 justify-content-lg-end">
+				            <li onclick=removeMenu() class="nav-item me-lg-3 py-lg-0 ps-lg-0">
 				                <a onclick=setActive(event) class="nav-link active" href="#">Home</a>
 				            </li>
-				            <li class="nav-item">
+				            <li onclick=removeMenu() class="nav-item me-lg-3 py-lg-0 ps-lg-0">
 				                <a onclick=setActive(event) class="nav-link" href="#services">Service</a>
 				            </li>
-				            <li class="nav-item">
+				            <li onclick=removeMenu() class="nav-item me-lg-3 py-lg-0 ps-lg-0">
 				                <a onclick=setActive(event) class="nav-link" href="#">Features</a>
 				            </li>
-				            <li class="nav-item">
+				            <li onclick=removeMenu() class="nav-item me-lg-3 py-lg-0 ps-lg-0">
 				                <a onclick=setActive(event) class="nav-link" href="#">Works</a>
 				            </li>
-				            <li class="nav-item">
+				            <li onclick=removeMenu() class="nav-item me-lg-3 py-lg-0 ps-lg-0">
 				                <a onclick=setActive(event) class="nav-link" href="#tech_stack">Tech Stack</a>
 				            </li>
-				            <li class="nav-item">
+				            <li onclick=removeMenu() class="nav-item me-lg-3 py-lg-0 ps-lg-0">
 				                <a onclick=setActive(event) class="nav-link" href="#team">Team</a>
 				            </li>
-				            <li class="nav-item">
+				            <li onclick=removeMenu() class="nav-item me-lg-3 py-lg-0 ps-lg-0">
 				                <a onclick=setActive(event) class="nav-link" href="#blogs">Blog</a>
 				            </li>
-				            <li class="nav-item">
+				            <li onclick=removeMenu() class="nav-item py-lg-0 ps-lg-0">
 				                <a onclick=setActive(event) class="nav-link" href="#contact">Contact</a>
 				            </li>
 				        </ul>
 				    </div>
 				</header>
 				<div class="content container">	
-					<h1 class="text-left w-50 mb-3">Web Development Company</h1>
+					<h1 class="text-left col-lg-6 col-md-6 col-sm-8 mb-3">Web Development Company</h1>
 					<p>Empowering Startups with our innovative web development services</p>
 					<button type="button" class="btn btn-primary py-3 mt-3 rounded-pill">TALK TO US</button>
 				</div>
@@ -61,57 +90,68 @@
 			<section class="wrapper container">
 				<div class="top mb-5">
 					<h2 class="text-center mb-5">OUR SERVICES</h2>
-					<p class="text-center w-50 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
+					<p class="text-center col-lg-6 col-sm-9 col-12 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
 				</div>
-				<div class="middle row gy-3 gx-5 mb-5">
-					<div class="item rounded-top col-6 col-md-4">
-						<div onmouseenter=setHover() class="item-child p-4 rounded d-flex flex-column justify-content-between align-items-center">
+				<div class="middle row gy-3 mb-5">
+					<div class="item col-12 col-sm-6 col-md-4 px-md-1 px-lg-3">
+						<div onmouseenter=setHover() onclick=setDropdown(event) data-index=1 class="item-child p-xl-4 p-lg-3 p-sm-2 rounded d-flex flex-column justify-content-between align-items-center">
 							<span class="imagewrapper mb-3 p-3 rounded-circle"><img src="./assets/images/Web Application.svg" alt="image" /></span>
-							<h5 class="mb-3">Web Application</h5>
+							<h5 class="mb-sm-3 mb-0">Web Application</h5>
 							<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo quia esse cumque facilis, et hic necessitatibus aliqua.</p>
+							<i class="fa fa-chevron-circle-down down d-sm-none" aria-hidden="true"></i>
+							<i class="fa fa-chevron-circle-up up d-none" aria-hidden="true"></i>
 						</div>
 					</div>
-					<div class="item col-6 col-md-4">
-						<div onmouseenter=setHover() class="item-child p-4 rounded d-flex flex-column justify-content-between align-items-center">
+					<div class="item col-12 col-sm-6 col-md-4 px-md-1 px-lg-3">
+						<div onmouseenter=setHover() onclick=setDropdown(event) class="item-child p-xl-4 p-lg-3 p-sm-2 rounded d-flex flex-column justify-content-between align-items-center">
 							<span class="imagewrapper mb-3 p-3 rounded-circle"><img src="./assets/images/Web Application.svg" alt="image" /></span>
-							<h5 class="mb-3">Web Application</h5>
+							<h5 class="mb-sm-3 mb-0">Web Application</h5>
 							<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo quia esse cumque facilis, et hic necessitatibus aliqua.</p>
+							<i class="fa fa-chevron-circle-down down d-sm-none" aria-hidden="true"></i>
+							<i class="fa fa-chevron-circle-up up d-none" aria-hidden="true"></i>
 						</div>
 					</div>
-					<div class="item col-6 col-md-4">
-						<div onmouseenter=setHover() class="item-child p-4 rounded d-flex flex-column justify-content-between align-items-center">
+					<div class="item col-12 col-sm-6 col-md-4 px-md-1 px-lg-3">
+						<div onmouseenter=setHover() onclick=setDropdown(event) class="item-child p-xl-4 p-lg-3 p-sm-2 rounded d-flex flex-column justify-content-between align-items-center">
 							<span class="imagewrapper mb-3 p-3 rounded-circle"><img src="./assets/images/Web Application.svg" alt="image" /></span>
-							<h5 class="mb-3">Web Application</h5>
+							<h5 class="mb-sm-3 mb-0">Web Application</h5>
 							<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo quia esse cumque facilis, et hic necessitatibus aliqua.</p>
+							<i class="fa fa-chevron-circle-down down d-sm-none" aria-hidden="true"></i>
+							<i class="fa fa-chevron-circle-up up d-none" aria-hidden="true"></i>
 						</div>
 					</div>
-					<div class="w-100"></div>
-					<div class="item col-6 col-md-4">
-						<div onmouseenter=setHover() class="item-child p-4 rounded d-flex flex-column justify-content-between align-items-center">
+					<div class="item col-12 col-sm-6 col-md-4 px-md-1 px-lg-3">
+						<div onmouseenter=setHover() onclick=setDropdown(event) class="item-child p-xl-4 p-lg-3 p-sm-2 rounded d-flex flex-column justify-content-between align-items-center">
 							<span class="imagewrapper mb-3 p-3 rounded-circle"><img src="./assets/images/Web Application.svg" alt="image" /></span>
-							<h5 class="mb-3">Web Application</h5>
+							<h5 class="mb-sm-3 mb-0">Web Application</h5>
 							<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo quia esse cumque facilis, et hic necessitatibus aliqua.</p>
+							<i class="fa fa-chevron-circle-down down d-sm-none" aria-hidden="true"></i>
+							<i class="fa fa-chevron-circle-up up d-none" aria-hidden="true"></i>
 						</div>
 					</div>
-					<div class="item col-6 col-md-4">
-						<div onmouseenter=setHover() class="item-child p-4 rounded d-flex flex-column justify-content-between align-items-center">
+					<div class="item col-12 col-sm-6 col-md-4 px-md-1 px-lg-3">
+						<div onmouseenter=setHover() onclick=setDropdown(event) class="item-child p-xl-4 p-lg-3 p-sm-2 rounded d-flex flex-column justify-content-between align-items-center">
 							<span class="imagewrapper mb-3 p-3 rounded-circle"><img src="./assets/images/Web Application.svg" alt="image" /></span>
-							<h5 class="mb-3">Web Application</h5>
+							<h5 class="mb-sm-3 mb-0">Web Application</h5>
 							<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo quia esse cumque facilis, et hic necessitatibus aliqua.</p>
+							<i class="fa fa-chevron-circle-down down d-sm-none" aria-hidden="true"></i>
+							<i class="fa fa-chevron-circle-up up d-none" aria-hidden="true"></i>
 						</div>
 					</div>
-					<div class="item col-6 col-md-4">
-						<div onmouseenter=setHover() class="item-child p-4 rounded d-flex flex-column justify-content-between align-items-center">
+					<div class="item col-12 col-sm-6 col-md-4 px-md-1 px-lg-3">
+						<div onmouseenter=setHover() onclick=setDropdown(event) class="item-child p-xl-4 p-lg-3 p-sm-2 rounded d-flex flex-column justify-content-between align-items-center">
 							<span class="imagewrapper mb-3 p-3 rounded-circle"><img src="./assets/images/Web Application.svg" alt="image" /></span>
-							<h5 class="mb-3">Web Application</h5>
+							<h5 class="mb-sm-3 mb-0">Web Application</h5>
 							<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo quia esse cumque facilis, et hic necessitatibus aliqua.</p>
+							<i class="fa fa-chevron-circle-down down d-sm-none" aria-hidden="true"></i>
+							<i class="fa fa-chevron-circle-up up d-none" aria-hidden="true"></i>
 						</div>
 					</div>
 				</div>
 				<div class="bottom">
 					<h2 class="text-center mb-5">GOT AN AWESOME IDEA?</h2>
 					<span class="d-block text-center mb-1">Then why wait?</span>
-					<p class="text-center w-50 mx-auto mb-4">We have perfect teams to transform your ideass into digital products</p>
+					<p class="text-center col-lg-6 col-sm-9 col-12 mx-auto mb-4">We have perfect teams to transform your ideass into digital products</p>
 					<button type="button" class="d-block btn btn-primary py-3 mt-3 rounded-pill mx-auto">LET'S START</button>
 				</div>
 			</section>
@@ -119,36 +159,44 @@
 		<section id="about" class="container">
 			<div class="top">
 				<h2 class="text-center mb-5">WHY CHOOSE US?</h2>
-				<p class="text-center w-50 mx-auto mb-4">We focus on our client's success when building super fast web applications.</p>
+				<p class="text-center col-lg-6 col-sm-9 col-12 mx-auto mb-4">We focus on our client's success when building super fast web applications.</p>
 			</div>
-			<div class="content d-flex justify-content-between mt-5">
-				<div class="item me-5">
-					<img class="d-block mb-3" src="./assets/images/Communication.svg" alt="image" />
-					<h6 class="mb-4">We Listen and We Pitch In</h6>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam at aperiam magnam accusantium quasi dolor laborum? Aut ducimus minima explicabo.</p>
+			<div class="content d-flex flex-wrap justify-content-between mt-5">
+				<div class="item mb-5 mb-md-0 col-lg-3 col-md-5 pe-lg-3 mb-md-3 d-flex d-md-block justify-content-between align-items-center">
+					<img class="d-block mb-md-3 mb-0 align-self-start me-3 me-md-0" src="./assets/images/Communication.svg" alt="image" />
+					<div class="pt-2 pt-md-0">
+						<h6 class="mb-md-4 mb-1">We Listen and We Pitch In</h6>
+						<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam at aperiam magnam accusantium quasi dolor laborum? Aut ducimus minima explicabo.</p>
+					</div>
 				</div>
-				<div class="item me-5">
-					<img class="d-block mb-3" src="./assets/images/Communication.svg" alt="image" />
-					<h6 class="mb-4">Code Quality</h6>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, velit obcaecati, consectetur quaerat cumque id quia quo quis officia porro repellendus cupiditate.</p>
+				<div class="item mb-5 mb-md-0 col-lg-3 col-md-5 pe-lg-3 mb-md-3 d-flex d-md-block justify-content-between align-items-center">
+					<img class="d-block mb-md-3 mb-0 align-self-start me-3 me-md-0" src="./assets/images/Communication.svg" alt="image" />
+					<div class="pt-2 pt-md-0">
+						<h6 class="mb-md-4 mb-1">Code Quality</h6>
+						<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam at aperiam magnam accusantium quasi dolor laborum? Aut ducimus minima explicabo.</p>
+					</div>
 				</div>
-				<div class="item me-5">
-					<img class="d-block mb-3" src="./assets/images/Communication.svg" alt="image" />
-					<h6 class="mb-4">Awesome Team</h6>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque quibusdam et, explicabo non commodi harum, culpa magnam totam sit.</p>
+				<div class="item mb-5 mb-md-0 col-lg-3 col-md-5 pe-lg-3 d-flex d-md-block justify-content-between align-items-center">
+					<img class="d-block mb-md-3 mb-0 align-self-start me-3 me-md-0" src="./assets/images/Communication.svg" alt="image" />
+					<div class="pt-2 pt-md-0">
+						<h6 class="mb-md-4 mb-1">Awesome Team</h6>
+						<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex atque quibusdam et, explicabo non commodi harum, culpa magnam totam sit.</p>
+					</div>
 				</div>
-				<div class="item">
-					<img class="d-block mb-3" src="./assets/images/Communication.svg" alt="image" />
-					<h6 class="mb-4">Communcation</h6>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae ullam iure temporibus sunt libero aperiam blanditiis debitis repudiandae soluta maiores.</p>
+				<div class="item mb-5 mb-md-0 col-lg-3 col-md-5 d-flex d-md-block justify-content-between align-items-center">
+					<img class="d-block mb-md-3 mb-0 align-self-start me-3 me-md-0" src="./assets/images/Communication.svg" alt="image" />
+					<div class="pt-2 pt-md-0">
+						<h6 class="mb-md-4 mb-1">Communcation</h6>
+						<p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae ullam iure temporibus sunt libero aperiam blanditiis debitis repudiandae soluta maiores.</p>
+					</div>
 				</div>
 			</div>
 		</section>
-		<section id="portfolio" class="my-5">
+		<section id="portfolio" class="mb-5 mt-0 my-sm-5">
 			<section class="wrapper container">
 				<div class="top">
 					<h2 class="text-center mb-5">OUR PORTFOLIO</h2>
-					<p class="text-center w-50 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
+					<p class="text-center col-lg-6 col-sm-9 col-12 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
 				</div>
 				<div class="slick-first d-flex justify-content-between mt-5">
 					<div class="item">
@@ -188,155 +236,161 @@
 		</section>
 		<section id="tech_stack">
 			<div class="top container">
-				<h2 class="text-center mb-5">OUR PORTFOLIO</h2>
-				<p class="text-center w-50 mx-auto mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
-				<div class="content d-flex justify-content-between">
-					<div class="item me-5">
-						<h6 class="text-center">WEB</h6>
-						<div class="item-child d-flex flex-wrap justify-content-between align-items-between">
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
+				<h2 class="text-center mb-5">TECH STACK</h2>
+				<p class="text-center col-lg-6 col-sm-9 col-12 mx-auto mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
+				<div class="content d-flex justify-content-between flex-column flex-md-row">
+					<div class="item me-lg-5 me-md-2 mb-4 mb-md-0">
+						<h6 class="text-md-center text-left">WEB</h6>
+						<div class="item-child row justify-content-lg-between justify-content-md-center align-items-between">
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/ANGULAR.png" alt="image" />
 								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/AWS.png" alt="image" />
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AWS.png" alt="image" />
 								<h6 class="text-center mt-1 mb-0">AWS</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/AZURE.png" alt="image" />
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AZURE.png" alt="image" />
 								<h6 class="text-center mt-1 mb-0">AZURE</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/BIGML.png" alt="image" />
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/BIGML.png" alt="image" />
 								<h6 class="text-center mt-1 mb-0">BIGML</h6>
 							</span>
 						</div>
-					</div>
-					<div class="item me-5">
-						<h6 class="text-center">WEB</h6>
-						<div class="item-child d-flex flex-wrap justify-content-between">
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
+					</div><div class="item me-lg-5 me-md mb-4 mb-md-0-2">
+						<h6 class="text-md-center text-left">WEB</h6>
+						<div class="item-child row justify-content-lg-between justify-content-md-center align-items-between flex-row">
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/ANGULAR.png" alt="image" />
 								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AWS.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">AWS</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AZURE.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">AZURE</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
-							</span>
-						</div>
-					</div>
-					<div class="item me-5">
-						<h6 class="text-center">WEB</h6>
-						<div class="item-child d-flex flex-wrap justify-content-between">
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
-							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
-							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
-							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/BIGML.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">BIGML</h6>
 							</span>
 						</div>
-					</div>
-					<div class="item me-5">
-						<h6 class="text-center">WEB</h6>
-						<div class="item-child d-flex flex-wrap justify-content-between">
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
+					</div><div class="item me-lg-5 me-md mb-4 mb-md-0-2">
+						<h6 class="text-md-center text-left">WEB</h6>
+						<div class="item-child row justify-content-lg-between justify-content-md-center align-items-between flex-row">
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/ANGULAR.png" alt="image" />
 								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AWS.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">AWS</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AZURE.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">AZURE</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/BIGML.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">BIGML</h6>
 							</span>
 						</div>
-					</div>
-					<div class="item me-5">
-						<h6 class="text-center">WEB</h6>
-						<div class="item-child d-flex flex-wrap justify-content-between">
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
+					</div><div class="item me-lg-5 me-md mb-4 mb-md-0-2">
+						<h6 class="text-md-center text-left">WEB</h6>
+						<div class="item-child row justify-content-lg-between justify-content-md-center align-items-between flex-row">
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/ANGULAR.png" alt="image" />
 								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AWS.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">AWS</h6>
+							</span>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AZURE.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">AZURE</h6>
+							</span>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/BIGML.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">BIGML</h6>
+							</span>
+						</div>
+					</div><div class="item">
+						<h6 class="text-md-center text-left">WEB</h6>
+						<div class="item-child row justify-content-lg-between justify-content-md-center align-items-between flex-row">
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/ANGULAR.png" alt="image" />
 								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AWS.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">AWS</h6>
 							</span>
-							<span class="imagewrapper d-block p-2 rounded">
-								<img class="d-block mx-auto" src="./assets/images/logos/ANGULAR.png" alt="image" />
-								<h6 class="text-center mt-1 mb-0">ANGULAR</h6>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/AZURE.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">AZURE</h6>
+							</span>
+							<span class="imagewrapper d-block p-lg-2 p-0 rounded col-lg-6 col-md-5 col-3">
+								<img class="d-block mx-auto p-1 p-lg-0" src="./assets/images/logos/BIGML.png" alt="image" />
+								<h6 class="text-center mt-1 mb-0">BIGML</h6>
 							</span>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="middle my-5">
-				<section class="wrapper container d-flex justify-content-between align-items-center">
-					<div class="item d-flex flex-column justify-content-between align-items-center py-5 px-4 rounded">
-						<img class="mb-4" src="./assets/images/MVP Development.svg" alt="image" />
-						<h6 class="mb-2">ISO 9001:2015</h6>
-						<span>certified company</span>
-					</div>
-					<div class="item d-flex flex-column justify-content-between align-items-center py-5 px-4 rounded">
-						<img class="mb-4" src="./assets/images/MVP Development.svg" alt="image" />
-						<h6 class="mb-2">ISO 9001:2015</h6>
-						<span>certified company</span>
-					</div>
-					<div class="item d-flex flex-column justify-content-between align-items-center py-5 px-4 rounded">
-						<img class="mb-4" src="./assets/images/MVP Development.svg" alt="image" />
-						<h6 class="mb-2">ISO 9001:2015</h6>
-						<span>certified company</span>
-					</div>
-					<div class="item d-flex flex-column justify-content-between align-items-center py-5 px-4 rounded">
-						<img class="mb-4" src="./assets/images/MVP Development.svg" alt="image" />
-						<h6 class="mb-2">ISO 9001:2015</h6>
-						<span>certified company</span>
+			<div class="middle mb-0 mt-5 my-sm-5">
+				<section class="wrapper container py-5 px-md-0">
+					<div class="row gx-2 gy-2 gx-sm-3 gy-sm-3 gy-md-0 mx-auto d-flex justify-content-between align-items-center">
+						<div class="item col-md-3 col-6">
+							<div class="item-child d-flex flex-column justify-content-between align-items-center py-xl-5 py-lg-4 py-3 px-md-3 px-2 rounded">
+								<img class="mb-4" src="./assets/images/MVP Development.svg" alt="image" />
+								<h6 class="mb-2">ISO 9001:2015</h6>
+								<span class="text-center">certified company</span>
+							</div>
+						</div>
+						<div class="item col-md-3 col-6">
+							<div class="item-child d-flex flex-column justify-content-between align-items-center py-xl-5 py-lg-4 py-3 px-md-3 px-2 rounded">
+								<img class="mb-4" src="./assets/images/MVP Development.svg" alt="image" />
+								<h6 class="mb-2">ISO 9001:2015</h6>
+								<span class="text-center">certified company</span>
+							</div>
+						</div>
+						<div class="item col-md-3 col-6">
+							<div class="item-child d-flex flex-column justify-content-between align-items-center py-xl-5 py-lg-4 py-3 px-md-3 px-2 rounded">
+								<img class="mb-4" src="./assets/images/MVP Development.svg" alt="image" />
+								<h6 class="mb-2">ISO 9001:2015</h6>
+								<span class="text-center">certified company</span>
+							</div>
+						</div>
+						<div class="item col-md-3 col-6">
+							<div class="item-child d-flex flex-column justify-content-between align-items-center py-xl-5 py-lg-4 py-3 px-md-3 px-2 rounded">
+								<img class="mb-4" src="./assets/images/MVP Development.svg" alt="image" />
+								<h6 class="mb-2">ISO 9001:2015</h6>
+								<span class="text-center">certified company</span>
+							</div>
+						</div>
 					</div>
 				</section>
 			</div>
-			<div class="bottom my-5 container d-flex justify-content-between align-items-center px-5">
-				<div class="testimonials rounded p-4 me-5">
+			<div class="bottom my-5 container d-none d-sm-flex flex-wrap justify-content-lg-between justify-content-md-center align-items-center px-5">
+				<div class="testimonials rounded p-4 col-lg me-lg-5 col-md-10 mb-sm-5 mb-lg-0">
 					<div class="testimonials__top mb-4 d-flex justify-content-start align-items-center">
 						<div class="left rounded-circle me-4"><img class="d-block w-100" src="./assets/images/elon_musk.jpg" alt="image" /></div>
-						<div class="right">
+						<div class="right col-6">
 							<h4>Elon Musk</h4>
 							<span>CEO, SpaceX, CEO, Tesla</span>
 						</div>
 					</div>
 					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae quod minus iste, quia fugiat distinctio cumque doloremque, veritatis ipsam libero nam velit suscipit, aperiam ab commodi non dolorem est mollitia.</p>
 				</div>
-				<div class="testimonials rounded p-4">
+				<div class="testimonials rounded p-4 col-lg col-md-10">
 					<div class="testimonials__top mb-4 d-flex justify-content-start align-items-center">
 						<div class="left rounded-circle me-4"><img class="d-block w-100" src="./assets/images/stan_lee.jpg" alt="image" /></div>
-						<div class="right">
+						<div class="right col-6">
 							<h4>Stan Lee</h4>
 							<span>Writer, Editor, Publisher and Producer, Marvel Comics</span>
 						</div>
@@ -349,13 +403,13 @@
 			<section class="wrapper container">
 				<div class="top">
 					<h2 class="text-center mb-5">OUR CORE TEAM</h2>
-					<p class="text-center w-50 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
+					<p class="text-center col-lg-6 col-sm-9 col-12 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
 				</div>
 				<div class="slick-second d-flex justify-content-between mt-5">
 					<div class="item d-flex flex-column justify-content-between align-items-center pb-3">
 						<img class="d-block w-100 mb-2" src="./assets/images/ceo.jpg" alt="image" />
 						<h4 class="text-center mb-1">Faiz</h4>
-						<span class="mb-2">Chief Executive Officer</span>
+						<span class="text mb-2 text-center">Chief Executive Officer</span>
 						<span class="imagewrapper rounded-circle d-flex justify-content-center align-items-center p-2">
 							<i class="fa fa-linkedin" aria-hidden="true"></i>
 						</span>
@@ -363,7 +417,7 @@
 					<div class="item d-flex flex-column justify-content-between align-items-center pb-3">
 						<img class="d-block w-100 mb-2" src="./assets/images/ceo.jpg" alt="image" />
 						<h4 class="text-center mb-1">Faiz</h4>
-						<span class="mb-2">Chief Executive Officer</span>
+						<span class="text mb-2 text-center">Chief Executive Officer</span>
 						<span class="imagewrapper rounded-circle d-flex justify-content-center align-items-center p-2">
 							<i class="fa fa-linkedin" aria-hidden="true"></i>
 						</span>
@@ -371,7 +425,7 @@
 					<div class="item d-flex flex-column justify-content-between align-items-center pb-3">
 						<img class="d-block w-100 mb-2" src="./assets/images/ceo.jpg" alt="image" />
 						<h4 class="text-center mb-1">Faiz</h4>
-						<span class="mb-2">Chief Executive Officer</span>
+						<span class="text mb-2 text-center">Chief Executive Officer</span>
 						<span class="imagewrapper rounded-circle d-flex justify-content-center align-items-center p-2">
 							<i class="fa fa-linkedin" aria-hidden="true"></i>
 						</span>
@@ -379,7 +433,7 @@
 					<div class="item d-flex flex-column justify-content-between align-items-center pb-3">
 						<img class="d-block w-100 mb-2" src="./assets/images/ceo.jpg" alt="image" />
 						<h4 class="text-center mb-1">Faiz</h4>
-						<span class="mb-2">Chief Executive Officer</span>
+						<span class="text mb-2 text-center">Chief Executive Officer</span>
 						<span class="imagewrapper rounded-circle d-flex justify-content-center align-items-center p-2">
 							<i class="fa fa-linkedin" aria-hidden="true"></i>
 						</span>
@@ -387,7 +441,7 @@
 					<div class="item d-flex flex-column justify-content-between align-items-center pb-3">
 						<img class="d-block w-100 mb-2" src="./assets/images/ceo.jpg" alt="image" />
 						<h4 class="text-center mb-1">Faiz</h4>
-						<span class="mb-2">Chief Executive Officer</span>
+						<span class="text mb-2 text-center">Chief Executive Officer</span>
 						<span class="imagewrapper rounded-circle d-flex justify-content-center align-items-center p-2">
 							<i class="fa fa-linkedin" aria-hidden="true"></i>
 						</span>
@@ -395,13 +449,13 @@
 				</div>
 			</section>
 		</section>
-		<section id="blogs" class="container my-5">
+		<section id="blogs" class="container my-5 pb-sm-3 pb-md-0">
 			<div class="top">
 				<h2 class="text-center mb-5">BLOGS</h2>
-				<p class="text-center w-50 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
+				<p class="text-center col-lg-6 col-sm-9 col-12 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
 			</div>
-			<div class="content d-flex justify-content-between align-items-center mt-5">
-				<div class="item rounded-top me-4">
+			<div class="slick-third content d-flex justify-content-between align-items-center mt-5">
+				<div class="item rounded-top me-lg-4 me-md-0">
 					<img class="d-block w-100 mb-4" src="./assets/images/ngrok.jpg" alt="image" />
 					<span class="d-block mb-3">August 23, 2019</span>
 					<h5 class="mb-3">How to expose localhost to any device using Ngrok</h5>
@@ -464,23 +518,23 @@
 			<section class="wrapper container">
 				<div class="top">
 					<h2 class="text-center mb-5">LET'S CONNECT</h2>
-					<p class="text-center w-50 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
+					<p class="text-center col-lg-6 col-sm-9 col-12 mx-auto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, earum excepturi alias. Neque, magni! Non.</p>
 				</div>
-				<div class="content d-flex justify-content-start align-items-center"b>
-					<div class="content__left d-flex justify-content-between flex-wrap align-items-center me-5">
-						<input class="me-4 mb-4 rounded-pill p-3 flex-grow-1" placeholder="Your Name" type="text" />
-						<input class="mb-4 rounded-pill p-3 flex-grow-1" placeholder="Your Email" type="text" />
-						<input placeholder="Subject" class="w-100 mb-4 rounded-pill p-3" type="text" />
+				<div class="content d-flex flex-column-reverse flex-md-row justify-content-md-start justify-content-center align-items-center mt-md-5 mt-3">
+					<form class="content__left d-flex col-12 col-sm-8 justify-content-md-between justify-content-center flex-wrap align-items-center me-md-4 me-sm-0" name="RegForm" onsubmit="return form_validation()" method="post" action="#contact">
+						<input name="Name" class="me-lg-4 mb-md-4 mb-2 rounded-pill p-3 flex-grow-1" placeholder="Your Name*" type="text" />
+						<input name="EMail" class="mb-md-4 mb-2 rounded-pill p-3 flex-grow-1" placeholder="Your Email*" type="text" />
+						<input placeholder="Subject" class="w-100 mb-md-4 mb-2 rounded-pill p-3" type="text" />
 						<textarea class="w-100 rounded p-3" placeholder="Your Message" name="" id="" cols="5" rows="7"></textarea>
-					    <button type="button" class="btn btn-primary py-3 mt-3 rounded-pill">SEND MESSAGE</button>
-					</div>
-					<div class="content__right d-flex flex-column justify-content-start align-items-center align-self-stretch">
-						<div class="mb-3">
+					    <button type="submit" class="btn btn-primary py-3 mt-md-3 mt-4 rounded-pill">SEND MESSAGE</button>
+					</form>
+					<div class="content__right d-flex col-12 col-md-3 col-sm-8 flex-md-column justify-content-md-start justify-content-sm-center justify-content-between align-items-baseline align-self-md-stretch align-self-center mb-4 mb-md-0 px-sm-0 px-3">
+						<div class="mb-md-3 me-sm-4 me-md-0 mb-sm-0">
 							<i class="fa fa-envelope-o mb-1" aria-hidden="true"></i>
 							<h6 class="mb-2">E-mail</h6>
 							<a href="mailto:gwrisnkr.gmail.com" >bd@neoito.com</a>
 						</div>
-						<div class="mb-3">
+						<div class="mb-md-3 mb-sm-0">
 							<i class="fa fa-phone" aria-hidden="true"></i>
 							<h6 class="mb-2">Phone</h6>
 							<a href="tel:gwrisnkr.gmail.com" >+91 7306395993</a>
@@ -489,11 +543,11 @@
 				</div>
 			</section>
 		</section>
-		<section id="social" class="container d-flex justify-content-between align-items-center my-5">
-			<div class="left col-5">
-				<h3 class="w-75 mb-3">Web Development Company</h3>
-				<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Nemo ipsa consequatur recusandae sint nulla.</p>
-				<div class="d-flex justify-content-start align-items-center mt-2">
+		<section id="social" class="container d-flex flex-column flex-md-row justify-content-between align-items-center my-5">
+			<div class="left col-md-5 col-12 mb-4 mb-md-0">
+				<h3 class="col-md-9 col-sm-9 mx-auto mx-md-0 mb-3 text-md-start text-center">Web Development Company</h3>
+				<p class="col-md-12 col-sm-8 col-12 mx-auto mx-md-0 text-md-start text-center">Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Nemo ipsa consequatur recusandae sint nulla.</p>
+				<div class="d-flex justify-content-md-start justify-content-center align-items-center mt-2">
 					<span class="imagewrapper rounded-circle d-flex justify-content-center align-items-center p-3 me-3">
 						<i class="fa fa-facebook" aria-hidden="true"></i>
 					</span>
@@ -505,30 +559,31 @@
 					</span>
 				</div>
 			</div>
-			<div class="right col-5 justify-content-start align-self-stretch">
-				<h5>INSTAGRAM</h5>
-				<div class="d-flex justify-content-between align-items-center mt-2">
-					<span class="d-block me-1"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
-					<span class="d-block me-1"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
-					<span class="d-block me-1"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
-					<span class="d-block me-1"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
-					<span class="d-block me-1"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
-					<span class="d-block"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
+			<div class="right col-md-5 col-12 justify-content-start align-self-stretch">
+				<h5 class="text-center text-md-start mb-sm-3 mb-2 mb-md-0">INSTAGRAM</h5>
+				<div class="d-flex row gx-2 gy-2 gx-md-2 gx-sm-3 gy-sm-3 gy-md-0 flex-wrap justify-content-between align-items-center mt-2">
+					<span class="d-block col-md col-4"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
+					<span class="d-block col-md col-4"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
+					<span class="d-block col-md col-4"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
+					<span class="d-block col-md col-4"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
+					<span class="d-block col-md col-4"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
+					<span class="d-block col-md col-4"><img class="d-block w-100" src="./assets/images/instagram.jpg" alt="image" /></span>
 				</div>
 			</div>
 		</section>
 		<footer class="py-4">
-			<section class="wrapper container d-flex justify-content-between align-items-center">
-				<div class="left">© All Rights Reserved - Powered by <a href="https://www.neoito.com/">neoito.com</a></div>
+			<section class="wrapper container d-flex flex-column flex-md-row justify-content-between align-items-center">
+				<div class="left mb-3 mb-md-0">© All Rights Reserved - Powered by <a href="https://www.neoito.com/" target="blank">neoito.com</a></div>
 				<div class="right">
-					<span class="me-3">TOS</span>
-					<span class="me-3">Privacy Policy</span>
-					<span>Cookie Policy</span>
+					<a href="#" class="me-3">TOS</a>
+					<a href="#" class="me-3">Privacy Policy</a>
+					<a href="#">Cookie Policy</a>
 				</div>
+				<a href="#spotlight" class="imagewrapper rounded-circle d-flex justify-content-center align-items-center p-3">
+				<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+				</a>
 			</section>
-			<span class="imagewrapper rounded-circle d-flex justify-content-center align-items-center p-3 me-3">
-				<i class="fa fa-facebook" aria-hidden="true"></i>
-			</span>
+			
 		</footer>
 	</body>
 </html>

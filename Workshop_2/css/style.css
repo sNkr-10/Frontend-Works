@@ -33,6 +33,11 @@ i {
 	color: #fff;
 }
 
+a {
+	font-family: "open_sanssemibold";
+	text-decoration: none;
+}
+
 ::placeholder {
 	color: #212529;
 	opacity:  0.6;
@@ -92,17 +97,67 @@ i {
 	color: rgba(255,255,255,0.8);
 }
 
+#spotlight .side-menu {
+	position: fixed;
+	left: -100%;
+	top: 0;
+	height: 100vh;
+	transition: 700ms ease;
+	z-index: 2;
+	backdrop-filter: blur(2px) brightness(40%);
+}
+
+#spotlight .side-menu.active {
+	left: 0;
+	background: rgba(255,255,255,0.7);
+}
+
+#spotlight .side-menu .close-button {
+	position: absolute;
+	right: -30px;
+	top: 0;
+}
+
+#spotlight .side-menu .close-button i {
+	color: #F97794;
+} 
+
+#spotlight .side-menu .nav-item:hover,#spotlight .nav-item:focus {
+	background: #F97794;
+}
+
+#spotlight .side-menu .nav-item .nav-link {
+	color: #000;
+}
+
 #spotlight .wrapper {
 	backdrop-filter: brightness(20%);
-	padding: 0 50px 100px 0;
+	padding-bottom: 100px;
 }
 
-.navbar-nav .nav-item .nav-link {
+#spotlight .nav-item .nav-link {
 	position: relative;
 	font-family: "open_sanssemibold";
+	color: rgba(255,255,255,0.8);
+	font-size: 15px;
 }
 
-.navbar-nav .nav-item>.active::after {
+#spotlight header button:focus {
+	box-shadow: none;	
+}
+
+#spotlight header button.active {
+	animation: scaling 1s ease-in-out;
+	background: #F97794;
+}
+
+@keyframes scaling {
+  0% {transform: scale(1,1);}
+  50% {transform:  scale(1.1,1.1);}
+  100% {transform:  scale(1,1);}
+}
+
+#spotlight header .nav-item>.active::after {
     position: absolute;
     bottom: -10px;
     left: 50%;
@@ -115,12 +170,12 @@ i {
 
 #spotlight .content {
 	margin-top: 150px;
-	padding: 50px 0;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 #spotlight .content h1 {
 	font-family: "open_sansbold";
-	font-size: 66px;
 }
 
 #spotlight .content button {
@@ -139,11 +194,12 @@ i {
 }
 
 #services .middle .item .item-child {
-	border: 3px solid rgba(111,111,111,0.3);
+	border: 2px solid rgba(111,111,111,0.3);
+	position: relative;
 }
 
 #services .middle div.item div.active {
-	border: 3px solid #F97794;
+	border: 2px solid #F97794;
 }
 
 #services .middle .item .item-child .imagewrapper {
@@ -158,6 +214,23 @@ i {
 	font-family: "open_sanssemibold";
 	font-size: 14px;
 	opacity: 0.6;
+}
+
+#services .middle .item .item-child i.down {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	color: #F97794;
+	background: #fff;
+}
+
+#services .middle .item .item-child i.up {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	color: #F97794;
+	background: #fff;
 }
 
 #services .bottom {
@@ -218,11 +291,11 @@ i {
 		display: block;
 }
 
-.slick-list {
+.slick-second .slick-list{
 	margin-right: -20px!important;
 }
 
-.slick-initialized .slick-slide {
+.slick-second.slick-initialized .slick-slide {
 	margin-right: 20px!important;
 }
 
@@ -313,7 +386,6 @@ i {
 }
 
 #tech_stack .item-child .imagewrapper {
-	width: 100px;
 	cursor: pointer;
 	border: 2px solid #fff;
 }
@@ -337,22 +409,15 @@ i {
 	background: #F97794;
 }
 
-#tech_stack .middle .wrapper {
-	padding: 100px;
-}
-
-#tech_stack .middle .item {
+#tech_stack .middle .item-child {
 	border: 1px dotted rgba(255,255,255,0.6);
-	width: 23%;
 }
 
 #tech_stack .middle .item h6 {
-	font-size: 24px;
 	font-family: "open_sanssemibold";
 }
 
 #tech_stack .middle .item span {
-	font-size: 15px;
 	font-family: "open_sansbold";
 }
 
@@ -396,6 +461,7 @@ i {
 	background: #F97794;
 	width: 30px;
 	height: 30px;
+	cursor: pointer;
 }
 
 #blogs .content .item {
@@ -456,14 +522,13 @@ i {
 
 #contact .content .content__right div a {
 	color: #F97794;
-	font-family: "open_sanssemibold";
-	text-decoration: none;
 }
 
 #social .left div .imagewrapper {
 	background: #F97794;
 	width: 35px;
 	height: 35px;
+	cursor: pointer;
 }
 
 #social .left h3 {
@@ -471,7 +536,6 @@ i {
 }
 
 #social .right span {
-	width: 90px;
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -483,13 +547,136 @@ i {
 footer {
 	position: relative;
 	border-top: 1px dotted rgba(111,111,111,0.5);
+	font-size: 14px;
+	font-family: "open_sanssemibold";
+}
+
+footer .wrapper .left a {
+	color: #e87f13;
+}
+
+footer .wrapper .right a {
+	color: #212529;
+	opacity: 0.6;
 }
 
 footer .imagewrapper {
 	position: absolute;
-	right: 0;
 	top: 0;
+	right: 0;
+	transform: translate(-50%,-50%);
 	background: #F97794;
 	width: 35px;
 	height: 35px;
+}
+
+@media screen and (min-width: 1200px) {
+	#spotlight .content h1 {
+		font-size: 60px;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#tech_stack .middle .item span {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#tech_stack .middle .item span {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 576px){
+	#services {
+		padding: 50px 0;
+		background-clip: content-box;
+	}
+
+	#services .bottom {
+		margin-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	#services .middle .item-child {
+		padding: 15px;
+		border-radius: 8px!important;
+	}
+
+	#services .middle .item-child h5 {
+		z-index: -1;
+		font-size: 18px!important;
+	}
+
+	#services .middle .item-child.drop h5 {
+		margin-bottom: 10px!important;
+		z-index: 0;
+	}
+
+	#services .middle .item-child span,#services .middle .item-child p {
+		height: 0;
+		display: none;
+	}
+
+	#services .middle .item-child.drop p,#services .middle .item-child.drop span {
+		height: unset;
+		display: block;
+	}
+
+	#services .middle .item-child.drop i.down {
+		display: none!important;
+	}
+
+	#services .middle .item-child.drop i.up {
+		display: block!important;
+	}
+
+	#portfolio {
+		padding: 50px 0;
+		background-clip: content-box;
+	}
+
+	#portfolio .wrapper {
+		padding-top: 50px;
+	}
+
+	#tech_stack .middle span {
+		font-size: 13px;
+	}
+
+	#team {
+		padding: 50px 0 75px 0;
+		margin-top: 0;
+	}
+
+	#team .slick-second span.text {
+		font-size: 13px;
+	}
+
+	#contact {
+		padding: 50px 0;
+	}
+
+	#contact .content .content__left textarea {
+		border-radius: 28px!important;
+	}
+
+	#spotlight .content {
+		margin-top: 50px;
+	}
+
+	footer div.left {
+		font-size: 13px;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.slick-first .slick-list, .slick-third .slick-list {
+		margin-right: -20px!important;
+	}
+
+	.slick-first.slick-initialized .slick-slide, .slick-third.slick-initialized .slick-slide {
+		margin-right: 20px!important;
+	}
 }
